@@ -1,0 +1,10 @@
+insert into Streets (id, Name) values (1, 'Novick');
+insert into Streets (id, Name) values (2, 'Forster');
+insert into Streets (id, Name) values (3, 'Vernon');
+insert into Streets (id, Name) values (4, 'Kingsford');
+insert into Streets (id, Name) values (5, 'Maryland');
+insert into Streets (id, Name) values (6, 'Laurel');
+insert into Streets (id, Name) values (7, 'Dunning');
+insert into Streets (id, Name) values (8, 'La Follette');
+insert into Streets (id, Name) values (9, 'Utah');
+insert into Streets (id, Name) values (10, 'Dwight');

@@ -1,5 +1,6 @@
 namespace QuestRooms.DAL
 {
+    using QuestRooms.DAL.Configuration;
     using QuestRooms.DAL.Entities;
     using System;
     using System.Data.Entity;
@@ -16,6 +17,7 @@ namespace QuestRooms.DAL
         public RoomsContext()
             : base("name=RoomsContext")
         {
+            Database.SetInitializer(new DbInitializer());
         }
 
         // Add a DbSet for each entity type that you want to include in your model. For more information 

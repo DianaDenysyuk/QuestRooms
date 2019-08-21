@@ -1,0 +1,10 @@
+insert into Cities (id, Name) values (1, 'Sutton');
+insert into Cities (id, Name) values (2, 'Pernå');
+insert into Cities (id, Name) values (3, 'Shatura');
+insert into Cities (id, Name) values (4, 'Krasnofarfornyy');
+insert into Cities (id, Name) values (5, 'Rrapë');
+insert into Cities (id, Name) values (6, 'Panorama');
+insert into Cities (id, Name) values (7, 'Pidvolochys’k');
+insert into Cities (id, Name) values (8, 'Guimba');
+insert into Cities (id, Name) values (9, 'Rio Claro');
+insert into Cities (id, Name) values (10, 'São Gotardo');

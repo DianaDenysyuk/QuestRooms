@@ -1,0 +1,10 @@
+insert into Countries (id, Name) values (1, 'Germany');
+insert into Countries (id, Name) values (2, 'China');
+insert into Countries (id, Name) values (3, 'Poland');
+insert into Countries (id, Name) values (4, 'China');
+insert into Countries (id, Name) values (5, 'Ukraine');
+insert into Countries (id, Name) values (6, 'Afghanistan');
+insert into Countries (id, Name) values (7, 'Dominican Republic');
+insert into Countries (id, Name) values (8, 'Indonesia');
+insert into Countries (id, Name) values (9, 'Poland');
+insert into Countries (id, Name) values (10, 'Philippines');

@@ -63,7 +63,12 @@
     <Compile Include="Repositories\IGenericRepository.cs" />
     <Compile Include="RoomsContext.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="MockData\Addresses.sql" />
+    <Content Include="MockData\Cities.sql" />
+    <Content Include="MockData\Countries.sql" />
+    <Content Include="MockData\Streets.sql" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
