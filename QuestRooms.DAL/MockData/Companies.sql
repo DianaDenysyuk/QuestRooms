@@ -1,0 +1,10 @@
+insert into Companies (id, Name) values (1, 'Centimia');
+insert into Companies (id, Name) values (2, 'Aimbo');
+insert into Companies (id, Name) values (3, 'Skyvu');
+insert into Companies (id, Name) values (4, 'Fanoodle');
+insert into Companies (id, Name) values (5, 'Bubbletube');
+insert into Companies (id, Name) values (6, 'Cogidoo');
+insert into Companies (id, Name) values (7, 'Yombu');
+insert into Companies (id, Name) values (8, 'Omba');
+insert into Companies (id, Name) values (9, 'Browsecat');
+insert into Companies (id, Name) values (10, 'Kaymbo');

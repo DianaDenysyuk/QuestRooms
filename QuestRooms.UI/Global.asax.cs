@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuestRooms.UI.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,6 +14,7 @@ namespace QuestRooms.UI
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            AutofacConfig.ConfigureContainer();
         }
     }
 }

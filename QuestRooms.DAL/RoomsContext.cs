@@ -17,7 +17,7 @@ namespace QuestRooms.DAL
         public RoomsContext()
             : base("name=RoomsContext")
         {
-            Database.SetInitializer(new DbInitializer());
+            //Database.SetInitializer(new DbInitializer());
         }
 
         // Add a DbSet for each entity type that you want to include in your model. For more information 

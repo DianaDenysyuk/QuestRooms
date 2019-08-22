@@ -65,8 +65,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MockData\Addresses.sql" />
-    <Content Include="MockData\Cities.sql" />
+    <Content Include="MockData\Cities.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MockData\Companies.sql" />
     <Content Include="MockData\Countries.sql" />
+    <Content Include="MockData\Rooms.sql" />
     <Content Include="MockData\Streets.sql" />
   </ItemGroup>
   <ItemGroup>
