@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuestRooms.DAL.Entities
+namespace QuestRooms.BLL.DTOmodels
 {
-    public class Room
+    public class RoomDTO
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
@@ -20,8 +18,8 @@ namespace QuestRooms.DAL.Entities
         public int LvlFear { get; set; }
         public int LvlDifficulty { get; set; }
         public string Logo { get; set; }
-        public virtual Address Address { get; set; }
-        public virtual Company Company { get; set; }
-        public ICollection<Image> Images { get; set; }
+        public AddressDTO Address { get; set; }
+        public CompanyDTO Company { get; set; }
+        public ICollection<ImageDTO> Images { get; set; }
     }
 }

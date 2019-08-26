@@ -12,14 +12,15 @@ namespace QuestRooms.DAL.Configuration
     {
         private List<string> SqlFiles = new List<string>()
         {
-            "MockData/Cities.sql"
+            "/bin/MockData/Cities.sql"
         };
 
         protected override void Seed(RoomsContext context)
         {
+            var path = System.AppDomain.CurrentDomain.BaseDirectory;
             foreach(var f in SqlFiles)
             {
-                context.Database.ExecuteSqlCommand(ReadSql(f));
+                context.Database.ExecuteSqlCommand(ReadSql(path + f));
             }
         }
 

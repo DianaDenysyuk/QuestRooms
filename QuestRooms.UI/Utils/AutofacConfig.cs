@@ -1,6 +1,8 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
+using AutoMapper;
 using DataAccessLayer.Repositories;
+using QuestRooms.BLL.Mapping;
 using QuestRooms.BLL.Services.Abstraction;
 using QuestRooms.BLL.Services.Implementation;
 using QuestRooms.DAL;
@@ -28,7 +30,13 @@ namespace QuestRooms.UI.Utils
 
 
 
+            var mapperConfig = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile(new MapperProfile());
+            });
+            Mapper mapper = new Mapper(mapperConfig);
             // регистрируем споставление типов
+            builder.RegisterInstance(mapper).As<IMapper>();
             builder.RegisterType<CitiesService>().As<ICitiesService>();
             builder.RegisterType<GenericRepository<City>>().As<IGenericRepository<City>>();
             builder.RegisterType<RoomsContext>().As<DbContext>();

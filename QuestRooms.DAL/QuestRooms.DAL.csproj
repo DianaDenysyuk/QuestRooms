@@ -64,14 +64,24 @@
     <Compile Include="RoomsContext.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MockData\Addresses.sql" />
+    <Content Include="MockData\Addresses.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="MockData\Cities.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="MockData\Companies.sql" />
-    <Content Include="MockData\Countries.sql" />
-    <Content Include="MockData\Rooms.sql" />
-    <Content Include="MockData\Streets.sql" />
+    <Content Include="MockData\Companies.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MockData\Countries.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MockData\Rooms.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MockData\Streets.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
