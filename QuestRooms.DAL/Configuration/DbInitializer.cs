@@ -12,7 +12,12 @@ namespace QuestRooms.DAL.Configuration
     {
         private List<string> SqlFiles = new List<string>()
         {
-            "/bin/MockData/Cities.sql"
+            "/bin/MockData/Cities.sql",
+            "/bin/MockData/Streets.sql",
+            "/bin/MockData/Countries.sql",
+            "/bin/MockData/Addresses.sql",
+            "/bin/MockData/Companies.sql",
+            "/bin/MockData/Rooms.sql"
         };
 
         protected override void Seed(RoomsContext context)

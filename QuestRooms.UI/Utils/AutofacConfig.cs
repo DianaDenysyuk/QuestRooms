@@ -37,8 +37,13 @@ namespace QuestRooms.UI.Utils
             Mapper mapper = new Mapper(mapperConfig);
             // регистрируем споставление типов
             builder.RegisterInstance(mapper).As<IMapper>();
+
             builder.RegisterType<CitiesService>().As<ICitiesService>();
             builder.RegisterType<GenericRepository<City>>().As<IGenericRepository<City>>();
+
+            builder.RegisterType<RoomsService>().As<IRoomsService>();
+            builder.RegisterType<GenericRepository<Room>>().As<IGenericRepository<Room>>();
+
             builder.RegisterType<RoomsContext>().As<DbContext>();
             builder.RegisterType<RoomsContext>().AsSelf();
 
