@@ -21,5 +21,10 @@ namespace QuestRooms.UI.Controllers
             //return View();
             return View(roomsService.GetRooms().ToList());
         }
+        public ActionResult RoomDetails(int id)
+        {
+            //return View();
+            return View(roomsService.GetRooms().FirstOrDefault(x => x.Id==id));
+        }
     }
 }
