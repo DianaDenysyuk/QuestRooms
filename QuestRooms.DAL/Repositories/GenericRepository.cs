@@ -48,5 +48,6 @@ namespace DataAccessLayer.Repositories
         {
             return context.Set<TEntity>().Where(predicate).AsEnumerable();
         }
+
     }
 }

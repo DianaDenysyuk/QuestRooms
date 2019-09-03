@@ -1,12 +1,13 @@
 namespace QuestRooms.DAL
 {
+    using Microsoft.AspNet.Identity.EntityFramework;
     using QuestRooms.DAL.Configuration;
     using QuestRooms.DAL.Entities;
     using System;
     using System.Data.Entity;
     using System.Linq;
 
-    public class RoomsContext : DbContext
+    public class RoomsContext : IdentityDbContext<AppUser>
     {
         // Your context has been configured to use a 'RoomsContext' connection string from your application's 
         // configuration file (App.config or Web.config). By default, this connection string targets the 
@@ -30,6 +31,10 @@ namespace QuestRooms.DAL
         public virtual DbSet<Image> Images { get; set; }
         public virtual DbSet<Room> Rooms { get; set; }
         public virtual DbSet<Street> Streets { get; set; }
+        public static RoomsContext Create()
+        {
+            return new RoomsContext();
+        }
     }
 
     //public class MyEntity
