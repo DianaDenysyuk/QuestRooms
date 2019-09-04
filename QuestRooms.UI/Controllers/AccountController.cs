@@ -7,7 +7,9 @@ using QuestRooms.UI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Web;
+using System.Web.ModelBinding;
 using System.Web.Mvc;
 
 namespace QuestRooms.UI.Controllers
@@ -57,6 +59,41 @@ namespace QuestRooms.UI.Controllers
             ViewBag.Error = res.Errors;
             return View();
         }
+
+
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Login(UserLoginVM model)
+        {
+            //var user = new AppUser { Email = model.Login, UserName = model.Login };
+            var res = UserManager.Find(model.Login, model.Password);
+            if (res != null)
+            {
+                ClaimsIdentity claim = UserManager.CreateIdentity(res,
+                                    DefaultAuthenticationTypes.ApplicationCookie);
+                AuthenticationManager.SignOut();
+                AuthenticationManager.SignIn(new AuthenticationProperties
+                {
+                    IsPersistent = true
+                }, claim);
+                return RedirectToAction("Index", "Room");
+            }
+            //ModelState.AddModelError("", "User not exist");
+            ViewBag.Error = "User not exist";
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult LogOut(UserLoginVM model)
+        {
+            AuthenticationManager.SignOut();
+            return RedirectToAction("Index", "Room");
+        }
+
 
     }
 }

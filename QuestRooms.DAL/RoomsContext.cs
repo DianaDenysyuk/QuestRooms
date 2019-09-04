@@ -15,10 +15,11 @@ namespace QuestRooms.DAL
         // 
         // If you wish to target a different database and/or database provider, modify the 'RoomsContext' 
         // connection string in the application configuration file.
+
         public RoomsContext()
             : base("name=RoomsContext")
         {
-            Database.SetInitializer(new DbInitializer());
+        //    Database.SetInitializer(new DbInitializer());
         }
 
         // Add a DbSet for each entity type that you want to include in your model. For more information 
